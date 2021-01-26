@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/01/22 14:35:43.000.309,C:\Users\lenovo\Desktop\Delphi\2021_1_22_面向对象\Project_Polymorphic.dproj=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/01/22 15:06:30.000.958,=C:\Users\lenovo\Desktop\Delphi\2021_1_22_面向对象\Unit1.pas</Transaction>
+    <Transaction>2021/01/22 15:07:02.000.623,C:\Users\lenovo\Desktop\Delphi\2021_1_22_面向对象\多态\unit\Unit_Polymorphic.pas=C:\Users\lenovo\Desktop\Delphi\2021_1_22_面向对象\Unit1.pas</Transaction>
+    <Transaction>2021/01/22 15:49:20.000.891,=C:\Users\lenovo\Desktop\Delphi\2021_1_22_面向对象\多态\unit\Unit_Polymorphic.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="-1" SortType="1"/>
+</BorlandProject>

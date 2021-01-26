@@ -1,0 +1,120 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{07267924-A0E5-4E39-92AA-3B1880D650C6}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="初识对象\Project_Beginning.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="对象属性\Project_ObjectAttributes.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="指针\Project_Pointer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="继承\Project_Inherit.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="方法\Project_Method.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="接口\Project_Interface.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="多态\Project_Polymorphic.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="委托实现\Project_DelegateImplementation.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Project_Beginning">
+        <MSBuild Projects="初识对象\Project_Beginning.dproj"/>
+    </Target>
+    <Target Name="Project_Beginning:Clean">
+        <MSBuild Projects="初识对象\Project_Beginning.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_Beginning:Make">
+        <MSBuild Projects="初识对象\Project_Beginning.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project_ObjectAttributes">
+        <MSBuild Projects="对象属性\Project_ObjectAttributes.dproj"/>
+    </Target>
+    <Target Name="Project_ObjectAttributes:Clean">
+        <MSBuild Projects="对象属性\Project_ObjectAttributes.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_ObjectAttributes:Make">
+        <MSBuild Projects="对象属性\Project_ObjectAttributes.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project_Pointer">
+        <MSBuild Projects="指针\Project_Pointer.dproj"/>
+    </Target>
+    <Target Name="Project_Pointer:Clean">
+        <MSBuild Projects="指针\Project_Pointer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_Pointer:Make">
+        <MSBuild Projects="指针\Project_Pointer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project_Inherit">
+        <MSBuild Projects="继承\Project_Inherit.dproj"/>
+    </Target>
+    <Target Name="Project_Inherit:Clean">
+        <MSBuild Projects="继承\Project_Inherit.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_Inherit:Make">
+        <MSBuild Projects="继承\Project_Inherit.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project_Method">
+        <MSBuild Projects="方法\Project_Method.dproj"/>
+    </Target>
+    <Target Name="Project_Method:Clean">
+        <MSBuild Projects="方法\Project_Method.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_Method:Make">
+        <MSBuild Projects="方法\Project_Method.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project_Interface">
+        <MSBuild Projects="接口\Project_Interface.dproj"/>
+    </Target>
+    <Target Name="Project_Interface:Clean">
+        <MSBuild Projects="接口\Project_Interface.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_Interface:Make">
+        <MSBuild Projects="接口\Project_Interface.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project_Polymorphic">
+        <MSBuild Projects="多态\Project_Polymorphic.dproj"/>
+    </Target>
+    <Target Name="Project_Polymorphic:Clean">
+        <MSBuild Projects="多态\Project_Polymorphic.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_Polymorphic:Make">
+        <MSBuild Projects="多态\Project_Polymorphic.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project_DelegateImplementation">
+        <MSBuild Projects="委托实现\Project_DelegateImplementation.dproj"/>
+    </Target>
+    <Target Name="Project_DelegateImplementation:Clean">
+        <MSBuild Projects="委托实现\Project_DelegateImplementation.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_DelegateImplementation:Make">
+        <MSBuild Projects="委托实现\Project_DelegateImplementation.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Project_Beginning;Project_ObjectAttributes;Project_Pointer;Project_Inherit;Project_Method;Project_Interface;Project_Polymorphic;Project_DelegateImplementation"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Project_Beginning:Clean;Project_ObjectAttributes:Clean;Project_Pointer:Clean;Project_Inherit:Clean;Project_Method:Clean;Project_Interface:Clean;Project_Polymorphic:Clean;Project_DelegateImplementation:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Project_Beginning:Make;Project_ObjectAttributes:Make;Project_Pointer:Make;Project_Inherit:Make;Project_Method:Make;Project_Interface:Make;Project_Polymorphic:Make;Project_DelegateImplementation:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/01/22 14:36:28.000.601,C:\Users\lenovo\Desktop\Delphi\2021_1_22_面向对象\接口\Project_Interface.dproj=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/01/22 14:41:56.000.542,=C:\Users\lenovo\Desktop\Delphi\2021_1_22_面向对象\接口\Unit1.pas</Transaction>
+    <Transaction>2021/01/22 14:42:17.000.873,C:\Users\lenovo\Desktop\Delphi\2021_1_22_面向对象\接口\Unit_Interface.pas=C:\Users\lenovo\Desktop\Delphi\2021_1_22_面向对象\接口\Unit1.pas</Transaction>
+    <Transaction>2021/01/22 15:50:11.000.282,=C:\Users\lenovo\Desktop\Delphi\2021_1_22_面向对象\接口\unit\Unit_Interface.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="-1" SortType="1"/>
+</BorlandProject>

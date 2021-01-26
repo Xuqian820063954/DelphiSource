@@ -1,0 +1,23 @@
+unit Unit_Threads;
+
+interface
+
+uses
+  System.Classes;
+
+type
+  TWork = class(TThread)
+  private
+    { Private declarations }
+  protected
+    procedure Execute; override;
+  end;
+
+implementation
+
+procedure TWork.Execute;
+begin
+  { Place thread code here }
+end;
+
+end.

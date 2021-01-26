@@ -1,0 +1,29 @@
+unit Unit_Inherit;
+
+interface
+type  TAnimal=class
+      private
+        FWeight:Integer;
+      public
+        constructor Create();
+        property Weight:Integer read FWeight write FWeight;
+      end;
+      TDog=class(TAnimal)
+      public
+        constructor Create();
+      end;
+implementation
+{ TAnimal }
+
+constructor TAnimal.Create;
+begin
+  Writeln('动物类');
+end;
+
+{ TDog }
+
+constructor TDog.Create;
+begin
+  Writeln('狗类');
+  inherited Create;
+end;

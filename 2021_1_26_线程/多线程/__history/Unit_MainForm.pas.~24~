@@ -1,0 +1,104 @@
+unit Unit_MainForm;
+
+interface
+
+uses
+  Unit_Threads,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TMainForm = class(TForm)
+    lbl1: TLabel;
+    BtnStart: TButton;
+    BtnReset: TButton;
+    grp1: TGroupBox;
+    lbl2: TLabel;
+    BtnTStart1: TButton;
+    BtnSuspend: TButton;
+    BtnContinue: TButton;
+    BtnStop: TButton;
+    procedure BtnStartClick(Sender: TObject);
+    procedure BtnResetClick(Sender: TObject);
+    procedure BtnTStart1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure BtnSuspendClick(Sender: TObject);
+    procedure BtnContinueClick(Sender: TObject);
+    procedure BtnStopClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  MainForm: TMainForm;
+  WorkThread:TWork;
+
+implementation
+
+{$R *.dfm}
+procedure Works();
+var Num:Integer;
+begin
+  for Num := 1 to 10000 do
+  begin
+    MainForm.lbl1.Caption:=Num.ToString;
+    TThread.Sleep(100);//线程休眠100ms
+  end;
+end;
+procedure TMainForm.FormCreate(Sender: TObject);
+begin
+  WorkThread:=TWork.Create(True);//True表示线程创建完后先挂机,False是立即执行
+end;
+//组件1
+procedure TMainForm.BtnStartClick(Sender: TObject);
+begin
+  //TThread.CreateAnonymousThread(Work).Start;//创建匿名线程
+  TThread.CreateAnonymousThread(
+    procedure
+    var Num:Integer;
+    begin
+      for Num := 1 to 10000 do
+      begin
+        MainForm.lbl1.Caption:=Num.ToString;
+        TThread.Sleep(100);//线程休眠100ms
+      end;
+    end
+  ).Start;
+end;
+
+
+procedure TMainForm.BtnResetClick(Sender: TObject);
+begin
+  lbl1.Caption:='0';
+end;
+//组件2
+procedure TMainForm.BtnTStart1Click(Sender: TObject);
+begin
+  try
+    WorkThread.Start;
+  except on E: Exception do
+    ShowMessage('启动失败');
+  end;
+end;
+procedure TMainForm.BtnSuspendClick(Sender: TObject);
+begin
+  WorkThread.Suspended:=True;
+end;
+procedure TMainForm.BtnContinueClick(Sender: TObject);
+begin
+  WorkThread.Suspended:=False;
+end;
+procedure TMainForm.BtnStopClick(Sender: TObject);
+begin
+  WorkThread.FreeOnTerminate:=True;
+  try
+    TerminateThread(WorkThread.Handle,0);
+  finally
+    ShowMessage('终止失败');
+  end;
+
+end;
+
+end.

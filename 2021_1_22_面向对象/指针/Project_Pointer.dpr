@@ -1,0 +1,38 @@
+program Project_Pointer;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+{*------------------------------------------------------------------------------
+  指针符号
+      @取地址
+      ^定义指针
+  类型指针
+  无类型指针
+-------------------------------------------------------------------------------}
+var x:Integer;            //int x;
+    p:^Integer=@x;        //C语言型指针定义方式，等价于int *p=x;
+    q:PInteger;           //利用系统定义好的指针类型定义，等价于int *q;
+    v:Pointer;            //void *v;
+    pfun:function ():Integer;
+function MyFunction():Integer;
+begin
+  Result:=1;
+end;
+begin
+  x:=100;              //x=100;
+  Writeln(Integer(@x).ToHexString);//16进制输出x的地址
+  p:=@x;               //p=&x;
+  p^:=100;             //*p=100;
+  New(p);              //p=(int *)malloc(sizeof(int));
+  Dispose(p);          //free(p);
+  GetMem(p,100*sizeof(Integer));       //p=(int *)malloc(100*sizeof(int));
+  Inc(p);              //p++;
+  Inc(p,2);            //p+=2;
+  pfun:=MyFunction;
+  Writeln(pfun());
+  Readln;
+end.

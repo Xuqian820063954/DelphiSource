@@ -1,0 +1,26 @@
+program Project_DelegateImplementation;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+{*------------------------------------------------------------------------------
+  匿名函数
+    定义格式
+
+-------------------------------------------------------------------------------}
+type  TPtrToFunction=function (Age:Integer): Integer;
+      TFun=reference to function(Num:Integer):Integer;
+function Add(Age:Integer): Integer;
+begin
+  Writeln(Age);
+  Result:=Age;
+end;
+var pfun:TPtrToFunction;
+begin
+  pfun:=Add;
+  pfun(2);
+  Readln;
+end.

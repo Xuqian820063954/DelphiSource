@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/01/22 19:52:57.000.868,=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/25 15:01:34.175,=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/25 15:02:02.346,C:\Users\lenovo\Desktop\Delphi\2021_1_25_INI文件\Unit_INI.pas=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/25 15:02:02.346,C:\Users\lenovo\Desktop\Delphi\2021_1_25_INI文件\Unit_INI.dfm=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/01/25 15:02:10.956,C:\Users\lenovo\Desktop\Delphi\2021_1_25_INI文件\Project_INI.dproj=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

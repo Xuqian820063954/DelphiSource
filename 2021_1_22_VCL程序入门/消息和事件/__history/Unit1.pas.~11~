@@ -1,0 +1,30 @@
+unit Unit1;
+
+interface
+uses
+  System.SysUtils,
+  Winapi.Windows,
+  Vcl.Dialogs;
+type
+    {用户传输消息的结构}
+    TMyMessage=record
+      //消息号
+      MsgNum:Cardinal;//unsigned int MsgNum;
+      //传输的消息内容
+      MsgText:ShortString;
+    end;
+    {消息处理类}
+    TMsgAcceptor=class
+      //用于处理消息编号是2000的过程
+      procedure AcceptMsg2000(var msg:TMyMessage);message 2000;
+    end;
+implementation
+
+{ TMsgAcceptor }
+
+procedure TMsgAcceptor.AcceptMsg2000(var msg: TMyMessage);
+begin
+  ShowMessage('接收到消息，编号是'+msg.MsgNum.ToString+'，消息内容是'+msg.MsgText);
+end;
+
+end.

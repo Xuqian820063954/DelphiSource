@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/01/22 19:52:57.000.868,=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/25 14:08:17.426,=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/25 14:10:46.413,C:\Users\lenovo\Desktop\Delphi\2021_1_25_Json\MainForm.pas=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/25 14:10:46.413,C:\Users\lenovo\Desktop\Delphi\2021_1_25_Json\MainForm.dfm=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/01/25 14:11:04.406,C:\Users\lenovo\Desktop\Delphi\2021_1_25_Json\Project_Json.dproj=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/01/25 14:11:14.963,=C:\Users\lenovo\Desktop\Delphi\2021_1_25_Json\Unit1.pas</Transaction>
+    <Transaction>2021/01/25 14:11:23.872,C:\Users\lenovo\Desktop\Delphi\2021_1_25_Json\Unit_Class.pas=C:\Users\lenovo\Desktop\Delphi\2021_1_25_Json\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,46 @@
+unit Unit_Multithreading;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TMainForm = class(TForm)
+    lblNumber: TLabel;
+    BtnStart: TButton;
+    BtnReset: TButton;
+    procedure BtnStartClick(Sender: TObject);
+    procedure BtnResetClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  MainForm: TMainForm;
+
+implementation
+
+{$R *.dfm}
+procedure Work();
+var Num:Integer;
+begin
+  for Num := 1 to 10000 do
+  begin
+    Form1.lblNumber.Caption:=Num.ToString;
+  end;
+end;
+procedure TMainForm.BtnResetClick(Sender: TObject);
+begin
+  lblNumber.Caption:='0';
+end;
+
+procedure TMainForm.BtnStartClick(Sender: TObject);
+begin
+  TThread.CreateAnonymousThread(Work).Start;
+end;
+
+end.

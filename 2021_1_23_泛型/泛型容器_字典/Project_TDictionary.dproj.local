@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/01/22 19:52:57.000.868,=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/25 10:51:17.191,=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/25 10:51:43.286,C:\Users\lenovo\Desktop\Delphi\2021_1_23_泛型\泛型容器_字典\Unit_TDictionary.dfm=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/01/25 10:51:43.286,C:\Users\lenovo\Desktop\Delphi\2021_1_23_泛型\泛型容器_字典\Unit_TDictionary.pas=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/25 10:51:57.164,C:\Users\lenovo\Desktop\Delphi\2021_1_23_泛型\泛型容器_字典\Project_TDictionary.dproj=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/01/25 10:57:41.426,=C:\Users\lenovo\Desktop\Delphi\2021_1_23_泛型\泛型容器_字典\Unit1.pas</Transaction>
+    <Transaction>2021/01/25 10:57:50.646,C:\Users\lenovo\Desktop\Delphi\2021_1_23_泛型\泛型容器_字典\Unit_Class.pas=C:\Users\lenovo\Desktop\Delphi\2021_1_23_泛型\泛型容器_字典\Unit1.pas</Transaction>
+    <Transaction>2021/01/25 11:06:13.880,=C:\Users\lenovo\Desktop\Delphi\2021_1_23_泛型\泛型容器_字典\Unit1.pas</Transaction>
+    <Transaction>2021/01/25 11:06:46.008,C:\Users\lenovo\Desktop\Delphi\2021_1_23_泛型\泛型容器_字典\AddForm.pas=C:\Users\lenovo\Desktop\Delphi\2021_1_23_泛型\泛型容器_字典\Unit1.pas</Transaction>
+    <Transaction>2021/01/25 11:06:46.008,C:\Users\lenovo\Desktop\Delphi\2021_1_23_泛型\泛型容器_字典\AddForm.dfm=C:\Users\lenovo\Desktop\Delphi\2021_1_23_泛型\泛型容器_字典\Unit1.dfm</Transaction>
+    <Transaction>2021/01/25 11:08:33.209,C:\Users\lenovo\Desktop\Delphi\2021_1_23_泛型\泛型容器_字典\Unit_AddForm.pas=C:\Users\lenovo\Desktop\Delphi\2021_1_23_泛型\泛型容器_字典\AddForm.pas</Transaction>
+    <Transaction>2021/01/25 11:08:33.209,C:\Users\lenovo\Desktop\Delphi\2021_1_23_泛型\泛型容器_字典\Unit_AddForm.dfm=C:\Users\lenovo\Desktop\Delphi\2021_1_23_泛型\泛型容器_字典\AddForm.dfm</Transaction>
+    <Transaction>2021/01/25 11:09:02.111,C:\Users\lenovo\Desktop\Delphi\2021_1_23_泛型\泛型容器_字典\Unit_MainForm.pas=C:\Users\lenovo\Desktop\Delphi\2021_1_23_泛型\泛型容器_字典\Unit_TDictionary.pas</Transaction>
+    <Transaction>2021/01/25 11:09:02.111,C:\Users\lenovo\Desktop\Delphi\2021_1_23_泛型\泛型容器_字典\Unit_MainForm.dfm=C:\Users\lenovo\Desktop\Delphi\2021_1_23_泛型\泛型容器_字典\Unit_TDictionary.dfm</Transaction>
+    <Transaction>2021/01/25 11:30:24.860,=C:\Users\lenovo\Desktop\Delphi\2021_1_23_泛型\泛型容器_字典\Unit1.pas</Transaction>
+    <Transaction>2021/01/25 11:30:36.702,C:\Users\lenovo\Desktop\Delphi\2021_1_23_泛型\泛型容器_字典\Unit_Variable.pas=C:\Users\lenovo\Desktop\Delphi\2021_1_23_泛型\泛型容器_字典\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

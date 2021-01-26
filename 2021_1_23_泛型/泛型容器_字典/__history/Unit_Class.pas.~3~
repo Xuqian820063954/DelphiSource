@@ -1,0 +1,16 @@
+unit Unit_Class;
+
+interface
+type  TStudent=class
+      private
+        FName:string;
+        FAge:Integer;
+        FID:Integer;
+      public
+        property Name:string read FName write FName;
+        property Age:Integer read FAge write FAge;
+        property ID: Integer read FID write FID;
+      end;
+implementation
+
+end.

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/01/22 16:50:51.451,=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/22 16:52:49.981,C:\Users\lenovo\Desktop\Delphi\2021_1_22_VCL程序入门\初识窗体\Unit_Beginning.pas=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/22 16:52:49.981,C:\Users\lenovo\Desktop\Delphi\2021_1_22_VCL程序入门\初识窗体\Unit_Beginning.dfm=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/01/22 16:53:08.786,C:\Users\lenovo\Desktop\Delphi\2021_1_22_VCL程序入门\初识窗体\Project_Beginning.dproj=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/01/22 16:56:28.107,=C:\Users\lenovo\Desktop\Delphi\2021_1_22_VCL程序入门\初识窗体\Unit1.pas</Transaction>
+  </Transactions>  <ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Unit1.pas"/>
+    <File Path="Unit_Beginning.pas"/>
+    <File Path="Unit_Beginning.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

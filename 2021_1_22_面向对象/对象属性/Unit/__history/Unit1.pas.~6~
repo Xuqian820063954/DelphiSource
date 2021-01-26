@@ -1,0 +1,13 @@
+unit Unit1;
+
+interface
+type TPerson=class
+        private
+          FName:string;
+          FAge:Integer;
+        public
+          property Name:string read FName write FName;
+     end;
+implementation
+
+end.

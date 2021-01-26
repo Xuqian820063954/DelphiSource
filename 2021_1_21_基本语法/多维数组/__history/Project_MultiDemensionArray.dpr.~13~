@@ -1,0 +1,16 @@
+program Project_MultiDemensionArray;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+type DynamicDoubleArray=array of array of string;
+     //动态二维数组 typedef string **DynamicDoubleArray;
+     StaticDoubleArray=array[0..3] of array[0..2] of Integer;
+     //静态二维数组 typedef int StaticDoubleArray[4][3];
+var A:StaticDoubleArray;
+begin
+  A:=[[1,2],[3],[4,5,6]];
+end.

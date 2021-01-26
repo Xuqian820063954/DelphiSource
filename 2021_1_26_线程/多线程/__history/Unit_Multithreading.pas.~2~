@@ -1,0 +1,43 @@
+unit Unit_Multithreading;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    lblNumber: TLabel;
+    BtnStart: TButton;
+    BtnReset: TButton;
+    procedure BtnStartClick(Sender: TObject);
+    procedure BtnResetClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.BtnResetClick(Sender: TObject);
+begin
+  lblNumber.Caption:=0;
+end;
+
+procedure TForm1.BtnStartClick(Sender: TObject);
+var Num:Integer;
+begin
+  for Num := 1 to 10 do
+  begin
+    lblNumber.Caption:=Num.ToString;
+  end;
+end;
+
+end.

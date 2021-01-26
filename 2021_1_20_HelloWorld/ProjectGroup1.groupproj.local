@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2021/01/20 10:11:43.226,C:\Users\lenovo\Desktop\Delphi\HelloWorldForm\ProjectGroup1.groupproj=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\ProjectGroup1.groupproj</Transaction>
+    <Transaction>2021/01/20 10:12:55.024,C:\Users\lenovo\Desktop\Delphi\ProjectGroup1.groupproj=C:\Users\lenovo\Desktop\Delphi\HelloWorldForm\ProjectGroup1.groupproj</Transaction>
+  </Transactions>
+  <Default.Personality>
+    <Projects ActiveProject="C:\Users\lenovo\Desktop\Delphi\HelloWorldForm\ProjectHelloWorld.dproj"/>
+  </Default.Personality>
+</BorlandProject>

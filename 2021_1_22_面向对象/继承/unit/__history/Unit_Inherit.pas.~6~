@@ -1,0 +1,30 @@
+unit Unit_Inherit;
+
+interface
+type  TAnimal=class
+      private
+        FWeight:Integer;
+      public
+        constructor Create(FWeight:Integer);
+        property Weight:Integer read FWeight write FWeight;
+      end;
+      TDog=class(TAnimal)
+      public
+        constructor Create();
+      end;
+implementation
+{ TAnimal }
+
+constructor TAnimal.Create(Fweight:Integer);
+begin
+  Self.FWeight:=FWeight;
+end;
+
+{ TDog }
+
+constructor TDog.Create;
+begin
+  Writeln('π∑¿‡');
+  inherited Create(1001);
+end;
+end.

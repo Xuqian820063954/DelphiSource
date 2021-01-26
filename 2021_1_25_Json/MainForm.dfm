@@ -1,0 +1,59 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 201
+  ClientWidth = 449
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object mmo1: TMemo
+    Left = 0
+    Top = 72
+    Width = 449
+    Height = 129
+    TabOrder = 0
+  end
+  object BtnObjSerialize: TButton
+    Left = 48
+    Top = 24
+    Width = 75
+    Height = 25
+    Caption = #23545#35937#24207#21015#21270
+    TabOrder = 1
+    OnClick = BtnObjSerializeClick
+  end
+  object BtnObjDeserialize: TButton
+    Left = 120
+    Top = 24
+    Width = 75
+    Height = 25
+    Caption = #23545#35937#21453#24207#21015#21270
+    TabOrder = 2
+    OnClick = BtnObjDeserializeClick
+  end
+  object BtnArraySerialize: TButton
+    Left = 192
+    Top = 24
+    Width = 75
+    Height = 25
+    Caption = #25968#32452#24207#21015#21270
+    TabOrder = 3
+    OnClick = BtnArraySerializeClick
+  end
+  object BtnArrayDeserialize: TButton
+    Left = 264
+    Top = 24
+    Width = 75
+    Height = 25
+    Caption = #25968#32452#21453#24207#21015#21270
+    TabOrder = 4
+    OnClick = BtnArrayDeserializeClick
+  end
+end

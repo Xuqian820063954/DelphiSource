@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/01/22 14:01:58.000.324,C:\Users\lenovo\Desktop\Delphi\2021_1_22_面向对象\方法\Project_Method.dproj=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/01/22 14:04:21.000.405,=C:\Users\lenovo\Desktop\Delphi\2021_1_22_面向对象\方法\Unit1.pas</Transaction>
+    <Transaction>2021/01/22 14:04:41.000.739,C:\Users\lenovo\Desktop\Delphi\2021_1_22_面向对象\方法\unit\Unit_Method.pas=C:\Users\lenovo\Desktop\Delphi\2021_1_22_面向对象\方法\Unit1.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="-1" SortType="1"/>
+</BorlandProject>

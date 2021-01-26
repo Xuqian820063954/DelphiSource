@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/01/22 19:52:57.000.868,=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/26 10:24:23.647,=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/26 10:25:11.453,C:\Users\lenovo\Desktop\Delphi\2021_1_26_线程安全\Unit_ThreadSecurity.pas=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/26 10:25:11.453,C:\Users\lenovo\Desktop\Delphi\2021_1_26_线程安全\Unit_ThreadSecurity.dfm=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/01/26 10:25:32.651,C:\Users\lenovo\Desktop\Delphi\2021_1_26_线程安全\Project_ThreadSecurity.dproj=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/01/26 10:25:48.323,C:\Users\lenovo\Desktop\Delphi\2021_1_26_线程安全\Unit_MainForm.dfm=C:\Users\lenovo\Desktop\Delphi\2021_1_26_线程安全\Unit_ThreadSecurity.dfm</Transaction>
+    <Transaction>2021/01/26 10:25:48.323,C:\Users\lenovo\Desktop\Delphi\2021_1_26_线程安全\Unit_MainForm.pas=C:\Users\lenovo\Desktop\Delphi\2021_1_26_线程安全\Unit_ThreadSecurity.pas</Transaction>
+    <Transaction>2021/01/26 10:26:36.334,=C:\Users\lenovo\Desktop\Delphi\2021_1_26_线程安全\Unit1.pas</Transaction>
+    <Transaction>2021/01/26 10:27:12.464,C:\Users\lenovo\Desktop\Delphi\2021_1_26_线程安全\Unit_TWork.pas=C:\Users\lenovo\Desktop\Delphi\2021_1_26_线程安全\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

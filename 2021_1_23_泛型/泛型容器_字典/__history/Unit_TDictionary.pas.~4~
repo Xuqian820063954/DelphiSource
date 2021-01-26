@@ -1,0 +1,29 @@
+unit Unit_TDictionary;
+
+interface
+
+uses
+  System.Generics.Collections,Unit_Class,Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TMainForm = class(TForm)
+    BtnAdd: TButton;
+    BtnDel: TButton;
+    BtnUpdate: TButton;
+    BtnFind: TButton;
+    mmo1: TMemo;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  MainForm: TMainForm;
+
+implementation
+
+{$R *.dfm}
+
+end.

@@ -1,0 +1,14 @@
+program Project_Production_ConsumptionModule;
+
+uses
+  Vcl.Forms,
+  Unit_MainForm in '..\Unit_MainForm.pas' {Form1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

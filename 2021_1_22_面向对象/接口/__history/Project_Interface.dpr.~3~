@@ -1,0 +1,19 @@
+program Project_Interface;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils,
+  Unit_Interface in 'Unit_Interface.pas';
+
+{*------------------------------------------------------------------------------
+  接口interface
+  定义
+    只能有声明，不能有实现
+-------------------------------------------------------------------------------}
+
+begin
+
+end.

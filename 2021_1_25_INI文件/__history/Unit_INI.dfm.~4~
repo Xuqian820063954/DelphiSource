@@ -1,0 +1,129 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'INI'#25991#20214
+  ClientHeight = 260
+  ClientWidth = 236
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lblName: TLabel
+    Left = 32
+    Top = 24
+    Width = 36
+    Height = 13
+    Caption = #22995#21517#65306
+  end
+  object lblSex: TLabel
+    Left = 32
+    Top = 104
+    Width = 36
+    Height = 13
+    Caption = #24615#21035#65306
+  end
+  object lblAge: TLabel
+    Left = 32
+    Top = 64
+    Width = 36
+    Height = 13
+    Caption = #24180#40836#65306
+  end
+  object lblHobby: TLabel
+    Left = 32
+    Top = 140
+    Width = 36
+    Height = 13
+    Caption = #29233#22909#65306
+  end
+  object lblAddress: TLabel
+    Left = 32
+    Top = 176
+    Width = 36
+    Height = 13
+    Caption = #22320#22336#65306
+  end
+  object edtName: TEdit
+    Left = 80
+    Top = 21
+    Width = 121
+    Height = 21
+    TabOrder = 0
+  end
+  object rgSex: TRadioGroup
+    Left = 80
+    Top = 88
+    Width = 121
+    Height = 41
+    Caption = 'rgSex'
+    TabOrder = 1
+    Visible = False
+  end
+  object rbMan: TRadioButton
+    Left = 88
+    Top = 103
+    Width = 33
+    Height = 17
+    Caption = #30007
+    TabOrder = 2
+  end
+  object rbWoman: TRadioButton
+    Left = 136
+    Top = 103
+    Width = 33
+    Height = 17
+    Caption = #22899
+    TabOrder = 3
+  end
+  object edtAge: TEdit
+    Left = 80
+    Top = 61
+    Width = 121
+    Height = 21
+    NumbersOnly = True
+    TabOrder = 4
+  end
+  object grpHobby: TGroupBox
+    Left = 80
+    Top = 136
+    Width = 121
+    Height = 25
+    TabOrder = 5
+    object chkHobby1: TCheckBox
+      Left = 14
+      Top = 3
+      Width = 33
+      Height = 17
+      Caption = #38065
+      TabOrder = 0
+    end
+    object chkHobby2: TCheckBox
+      Left = 62
+      Top = 3
+      Width = 49
+      Height = 17
+      Caption = #32534#31243
+      TabOrder = 1
+    end
+  end
+  object cbbAddress: TComboBox
+    Left = 80
+    Top = 173
+    Width = 121
+    Height = 21
+    TabOrder = 6
+  end
+  object BtnSave: TButton
+    Left = 80
+    Top = 216
+    Width = 75
+    Height = 25
+    Caption = #20445#23384#35774#32622
+    TabOrder = 7
+  end
+end

@@ -1,0 +1,46 @@
+unit Unit_MainForm;
+
+interface
+
+uses
+  Unit_Class,Unit_Variable,Unit_AddForm
+  System.Generics.Collections,Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TMainForm = class(TForm)
+    BtnAdd: TButton;
+    BtnDel: TButton;
+    BtnUpdate: TButton;
+    BtnFind: TButton;
+    mmo1: TMemo;
+    procedure FormCreate(Sender: TObject);
+    procedure BtnAddClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  MainForm: TMainForm;
+implementation
+
+{$R *.dfm}
+
+procedure TMainForm.BtnAddClick(Sender: TObject);
+var AddForm:TAddForm;
+begin
+  AddForm:=TAddForm.Create(Self);//添加窗口
+  AddForm.Left:=Self.Left+Self.Width div 2-AddForm.Width div 2;
+  AddForm.Top:=Self.Top+Self.Height div 2-AddForm.Height div 2;
+  AddForm.ShowModal;
+end;
+
+procedure TMainForm.FormCreate(Sender: TObject);
+begin
+  //初始化
+  StudentList:=TDictionary<Integer,TStudent>.Create();
+end;
+
+end.

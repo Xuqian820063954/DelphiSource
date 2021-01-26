@@ -1,0 +1,34 @@
+unit Unit_Method;
+
+interface
+type  TPerson=class
+      public
+        procedure Static_Method();//静态方法
+        function Virtual_Method(): Integer;virtual;//虚拟方法
+      end;
+      TUser=class(TPerson)
+        function Virtual_Method(): Integer;//虚拟方法可以不加override
+      end;
+implementation
+
+{ TPerson }
+
+procedure TPerson.Static_Method;
+begin
+  Writeln('静态方法');
+end;
+
+function TPerson.Virtual_Method: Integer;
+begin
+  //一般为空，此处为测试用
+  Writeln('父类虚拟方法');
+end;
+
+{ TUser }
+
+function TUser.Virtual_Method: Integer;
+begin
+  Writeln('子类虚拟方法');
+end;
+
+end.

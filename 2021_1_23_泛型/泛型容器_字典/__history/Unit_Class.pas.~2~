@@ -1,0 +1,9 @@
+unit Unit_Class;
+
+interface
+type  TStudent=class
+
+      end;
+implementation
+
+end.

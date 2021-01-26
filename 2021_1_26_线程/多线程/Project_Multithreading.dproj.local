@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/01/22 19:52:57.000.868,=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/25 21:30:09.000.735,=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/25 21:32:00.000.801,C:\Users\lenovo\Desktop\Delphi\2021_1_25_多线程\Unit_Multithreading.pas=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/25 21:32:00.000.801,C:\Users\lenovo\Desktop\Delphi\2021_1_25_多线程\Unit_Multithreading.dfm=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/01/25 21:32:17.000.861,C:\Users\lenovo\Desktop\Delphi\2021_1_25_多线程\Project_Multithreading.dproj=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/01/26 09:04:31.000.047,=C:\Users\lenovo\Desktop\Delphi\2021_1_25_多线程\Unit1.pas</Transaction>
+    <Transaction>2021/01/26 09:04:51.000.910,C:\Users\lenovo\Desktop\Delphi\2021_1_25_多线程\Unit1.pas=C:\Users\lenovo\Desktop\Delphi\2021_1_25_多线程\Unit_Threads.pas</Transaction>
+    <Transaction>2021/01/26 09:27:30.000.350,C:\Users\lenovo\Desktop\Delphi\2021_1_25_多线程\Unit_Multithreading.pas=C:\Users\lenovo\Desktop\Delphi\2021_1_25_多线程\Unit_MainForm.pas</Transaction>
+    <Transaction>2021/01/26 09:27:30.000.350,C:\Users\lenovo\Desktop\Delphi\2021_1_25_多线程\Unit_Multithreading.dfm=C:\Users\lenovo\Desktop\Delphi\2021_1_25_多线程\Unit_MainForm.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,22 @@
+unit Unit_Polymorphic;
+
+interface
+type  IColor=interface
+
+      end;
+      TAnimal=class(TInterfacedObject)
+        procedure Run();virtual;abstract;
+      end;
+      TDog=class(TAnimal,IColor)
+        procedure Run();
+      end;
+implementation
+
+{ TDog }
+
+procedure TDog.Run;
+begin
+
+end;
+
+end.

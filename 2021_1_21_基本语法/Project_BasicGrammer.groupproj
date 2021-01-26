@@ -1,0 +1,84 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{E47EFDBD-F75F-4082-AB9E-FCAF9C9E5BDE}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="数组\Project_Array.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="动态数组\Project_DynamicArray.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="多维数组\Project_MultiDemensionArray.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="记录类型（结构体）\Project_Record.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="例程\Project_Function.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Project_Array">
+        <MSBuild Projects="数组\Project_Array.dproj"/>
+    </Target>
+    <Target Name="Project_Array:Clean">
+        <MSBuild Projects="数组\Project_Array.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_Array:Make">
+        <MSBuild Projects="数组\Project_Array.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project_DynamicArray">
+        <MSBuild Projects="动态数组\Project_DynamicArray.dproj"/>
+    </Target>
+    <Target Name="Project_DynamicArray:Clean">
+        <MSBuild Projects="动态数组\Project_DynamicArray.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_DynamicArray:Make">
+        <MSBuild Projects="动态数组\Project_DynamicArray.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project_MultiDemensionArray">
+        <MSBuild Projects="多维数组\Project_MultiDemensionArray.dproj"/>
+    </Target>
+    <Target Name="Project_MultiDemensionArray:Clean">
+        <MSBuild Projects="多维数组\Project_MultiDemensionArray.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_MultiDemensionArray:Make">
+        <MSBuild Projects="多维数组\Project_MultiDemensionArray.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project_Record">
+        <MSBuild Projects="记录类型（结构体）\Project_Record.dproj"/>
+    </Target>
+    <Target Name="Project_Record:Clean">
+        <MSBuild Projects="记录类型（结构体）\Project_Record.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_Record:Make">
+        <MSBuild Projects="记录类型（结构体）\Project_Record.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project_Function">
+        <MSBuild Projects="例程\Project_Function.dproj"/>
+    </Target>
+    <Target Name="Project_Function:Clean">
+        <MSBuild Projects="例程\Project_Function.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_Function:Make">
+        <MSBuild Projects="例程\Project_Function.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Project_Array;Project_DynamicArray;Project_MultiDemensionArray;Project_Record;Project_Function"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Project_Array:Clean;Project_DynamicArray:Clean;Project_MultiDemensionArray:Clean;Project_Record:Clean;Project_Function:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Project_Array:Make;Project_DynamicArray:Make;Project_MultiDemensionArray:Make;Project_Record:Make;Project_Function:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

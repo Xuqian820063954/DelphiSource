@@ -1,0 +1,42 @@
+unit Unit_Interface;
+
+interface
+type  IUsb1_0=interface//定义一个接口
+        ['{8A688588-79F4-4290-BA0B-917D98CCFCF7}']//ctrl+shift+G调出
+        procedure Read();//读方法
+      end;
+      IUsb2_0=interface(IUsb1_0)//接口继承接口
+        procedure write();//写方法
+      end;
+      IUsb3_0=interface
+        procedure Add();//加方法
+      end;
+      TComputer=class(TInterfacedObject)//定义子类的父类，因为Delphi是单继承，子类要继承接口，则父类必须继承接口的基类TInterfacedObject
+
+      end;
+      TLaptop=class(TComputer,IUsb2_0,IUsb3_0)//定义接口的实现类，可以有多个接口
+        procedure read();//实现接口1_0的方法，必需
+        procedure write();//实现接口2_0的方法，必需
+        procedure Add();//实现接口3.0的方法，必需
+      end;
+
+implementation
+
+{ TComputer }
+
+procedure TLaptop.Add;
+begin
+
+end;
+
+procedure TLaptop.read;
+begin
+
+end;
+
+procedure TLaptop.write;
+begin
+
+end;
+
+end.

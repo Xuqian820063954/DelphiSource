@@ -1,0 +1,15 @@
+unit Unit_Polymorphic;
+
+interface
+type  IColor=interface
+
+      end;
+      TAnimal=class(TInterfacedObject)
+
+      end;
+      TDog=class(TAnimal,IColor)
+
+      end;
+implementation
+
+end.

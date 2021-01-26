@@ -1,0 +1,24 @@
+版本控制
+	是指对软件开发中的各种程序代码、配置文件及说明文档等文件变更的管理。
+常用工具
+	CSV（淘汰）、SVN（主流）、Git（流行）
+管理平台
+	国际：GitHub
+	国内：coding.net（码市）、oschina（码云）
+Git工作流程
+	源代码文件-->初始化仓库-->加入到暂存区-->从暂存区提交到本地仓库-->推送到远程仓库
+常用命令
+	1、初始化仓库 git init
+	2、加入到暂存区 git add 文件名
+		2.1查询暂存区的信息 git status
+	3、从暂存区提交到本地仓库 git commit -m'本次提交的说明内容'
+		3.1提交之前需要设置提交人的信息
+			git config --global user.email "you@example.com"
+			git config --global user.name "Your Name"
+远程操作
+	1、下载远程仓库
+		git clone 地址
+	2、上载
+		git push
+	3、下载
+		git pull

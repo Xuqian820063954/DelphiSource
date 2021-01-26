@@ -1,0 +1,13 @@
+unit Unit_Domain;
+
+interface
+type
+  TProduct=class
+  private
+    FID:Integer;
+    FName: string;
+  end;
+
+implementation
+
+end.

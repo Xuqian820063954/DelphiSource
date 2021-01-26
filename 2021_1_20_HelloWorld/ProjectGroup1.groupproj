@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{58D59756-0049-4F62-9168-C2DDAC1F8F94}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="HelloWorldForm\ProjectHelloWorld.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="HelloWorldConsole\ProjectConsole.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ProjectHelloWorld">
+        <MSBuild Projects="HelloWorldForm\ProjectHelloWorld.dproj"/>
+    </Target>
+    <Target Name="ProjectHelloWorld:Clean">
+        <MSBuild Projects="HelloWorldForm\ProjectHelloWorld.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ProjectHelloWorld:Make">
+        <MSBuild Projects="HelloWorldForm\ProjectHelloWorld.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ProjectConsole">
+        <MSBuild Projects="HelloWorldConsole\ProjectConsole.dproj"/>
+    </Target>
+    <Target Name="ProjectConsole:Clean">
+        <MSBuild Projects="HelloWorldConsole\ProjectConsole.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ProjectConsole:Make">
+        <MSBuild Projects="HelloWorldConsole\ProjectConsole.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ProjectHelloWorld;ProjectConsole"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ProjectHelloWorld:Clean;ProjectConsole:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ProjectHelloWorld:Make;ProjectConsole:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

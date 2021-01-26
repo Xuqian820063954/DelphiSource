@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/01/20 09:33:56.000.416,=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/20 09:45:20.000.358,C:\Users\lenovo\Desktop\Delphi\HelloWorldForm\Unit1Form.dfm=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/01/20 09:45:20.000.358,C:\Users\lenovo\Desktop\Delphi\HelloWorldForm\Unit1Form.pas=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/20 10:01:17.000.411,C:\Users\lenovo\Desktop\Delphi\HelloWorldForm\ProjectHelloWorld.dproj=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

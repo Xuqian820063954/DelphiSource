@@ -1,0 +1,12 @@
+unit Unit_Polymorphic;
+
+interface
+type  TAnimal=class
+
+      end;
+      TDog=class(TAnimal)
+
+      end;
+implementation
+
+end.

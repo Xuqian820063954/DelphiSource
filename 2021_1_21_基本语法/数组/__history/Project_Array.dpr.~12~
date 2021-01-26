@@ -1,0 +1,21 @@
+program Project_Array;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+//数组
+type MyArray=array[0..10] of Char; //typedef char MyArray[11];
+var str:MyArray;                   //MyArray str;
+//数组遍历方式1
+procedure fun1();
+begin
+  
+end;
+begin
+  str:=[];
+  str[10]:='x';                    //NameArray[10]='x';
+  Readln;
+end.

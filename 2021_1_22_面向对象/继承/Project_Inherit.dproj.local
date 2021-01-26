@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/01/22 13:25:39.000.510,C:\Users\lenovo\Desktop\Delphi\2021_1_22_面向对象\继承\Project_Inherit.dproj=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/01/22 13:44:14.000.087,=C:\Users\lenovo\Desktop\Delphi\2021_1_22_面向对象\继承\Unit1.pas</Transaction>
+    <Transaction>2021/01/22 13:44:47.000.331,C:\Users\lenovo\Desktop\Delphi\2021_1_22_面向对象\继承\unit\Unit_Inherit.pas=C:\Users\lenovo\Desktop\Delphi\2021_1_22_面向对象\继承\Unit1.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="-1" SortType="1"/>
+</BorlandProject>

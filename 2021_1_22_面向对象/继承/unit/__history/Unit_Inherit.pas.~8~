@@ -1,0 +1,42 @@
+unit Unit_Inherit;
+
+interface
+type  TAnimal=class
+      private
+        FWeight:Integer;
+      public
+        constructor Create(FWeight:Integer);
+        property Weight:Integer read FWeight write FWeight;
+        procedure GetName();virtual;
+      end;
+      TDog=class(TAnimal)
+      public
+        constructor Create();
+        procedure GetName();override;
+      end;
+implementation
+{ TAnimal }
+
+constructor TAnimal.Create(Fweight:Integer);
+begin
+  Self.FWeight:=FWeight;
+end;
+
+procedure TAnimal.GetName;
+begin
+  Writeln('这是动物类的方法');
+end;
+
+{ TDog }
+
+constructor TDog.Create;
+begin
+  Writeln('狗类');
+  inherited Create(1001);//直接调用父类方法
+end;
+procedure TDog.GetName;
+begin
+  Writeln('这是狗类的方法')
+end;
+
+end.
