@@ -6,5 +6,20 @@
     <Transaction>2021/01/26 11:04:58.750,C:\Users\lenovo\Desktop\Delphi\2021_1_26_线程\Unit_MainForm.pas=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2021/01/26 11:04:58.750,C:\Users\lenovo\Desktop\Delphi\2021_1_26_线程\Unit_MainForm.dfm=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
     <Transaction>2021/01/26 11:06:20.227,C:\Users\lenovo\Desktop\Delphi\2021_1_26_线程\生产消费模型\Project_Production_ConsumptionModule.dproj=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
-  </Transactions>
+    <Transaction>2021/01/26 11:06:49.591,=C:\Users\lenovo\Desktop\Delphi\2021_1_26_线程\生产消费模型\Unit_MainForm.pas</Transaction>
+    <Transaction>2021/01/26 11:07:13.016,=C:\Users\lenovo\Desktop\Delphi\2021_1_26_线程\生产消费模型\Unit1.pas</Transaction>
+    <Transaction>2021/01/26 11:07:38.821,C:\Users\lenovo\Desktop\Delphi\2021_1_26_线程\生产消费模型\Unit_Threads.pas=C:\Users\lenovo\Desktop\Delphi\2021_1_26_线程\生产消费模型\Unit1.pas</Transaction>
+    <Transaction>2021/01/26 11:10:44.373,=C:\Users\lenovo\Desktop\Delphi\2021_1_26_线程\生产消费模型\Unit1.pas</Transaction>
+    <Transaction>2021/01/26 11:10:53.593,C:\Users\lenovo\Desktop\Delphi\2021_1_26_线程\生产消费模型\Unit_Product.pas=C:\Users\lenovo\Desktop\Delphi\2021_1_26_线程\生产消费模型\Unit1.pas</Transaction>
+    <Transaction>2021/01/26 11:11:10.372,C:\Users\lenovo\Desktop\Delphi\2021_1_26_线程\生产消费模型\Unit_Product.pas=</Transaction>
+    <Transaction>2021/01/26 11:11:28.240,=C:\Users\lenovo\Desktop\Delphi\2021_1_26_线程\生产消费模型\Unit1.pas</Transaction>
+    <Transaction>2021/01/26 11:11:35.442,C:\Users\lenovo\Desktop\Delphi\2021_1_26_线程\生产消费模型\Unit_Product.pas=C:\Users\lenovo\Desktop\Delphi\2021_1_26_线程\生产消费模型\Unit1.pas</Transaction>
+    <Transaction>2021/01/26 11:12:09.773,C:\Users\lenovo\Desktop\Delphi\2021_1_26_线程\生产消费模型\Unit_Domaim.pas=C:\Users\lenovo\Desktop\Delphi\2021_1_26_线程\生产消费模型\Unit_Product.pas</Transaction>
+    <Transaction>2021/01/26 11:12:14.937,C:\Users\lenovo\Desktop\Delphi\2021_1_26_线程\生产消费模型\Unit_Domain.pas=C:\Users\lenovo\Desktop\Delphi\2021_1_26_线程\生产消费模型\Unit_Domaim.pas</Transaction>
+  </Transactions>  <ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Unit_MainForm.pas"/>
+    <File Path="Unit_MainForm.dfm"/>
+    <File Path="Unit_Threads.pas"/>
+    <File Path="Unit_Domain.pas"/>
+  </ProjectSortOrder>
 </BorlandProject>
