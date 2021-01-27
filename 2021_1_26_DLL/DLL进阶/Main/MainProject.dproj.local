@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/01/22 19:52:57.000.868,=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/26 16:47:18.000.831,=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/26 16:48:23.000.382,C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\lenovo\Desktop\Delphi\2021_1_26_DLL\DLL进阶\MainProject.dfm</Transaction>
+    <Transaction>2021/01/26 16:48:23.000.382,C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\lenovo\Desktop\Delphi\2021_1_26_DLL\DLL进阶\MainProject.pas</Transaction>
+    <Transaction>2021/01/26 16:49:11.000.228,C:\Users\lenovo\Desktop\Delphi\2021_1_26_DLL\DLL进阶\MainProject.dfm=C:\Users\lenovo\Desktop\Delphi\2021_1_26_DLL\DLL进阶\MainForm.dfm</Transaction>
+    <Transaction>2021/01/26 16:49:11.000.228,C:\Users\lenovo\Desktop\Delphi\2021_1_26_DLL\DLL进阶\MainProject.pas=C:\Users\lenovo\Desktop\Delphi\2021_1_26_DLL\DLL进阶\MainForm.pas</Transaction>
+    <Transaction>2021/01/26 16:49:20.000.498,C:\Users\lenovo\Desktop\Delphi\2021_1_26_DLL\DLL进阶\MainForm.pas=</Transaction>
+    <Transaction>2021/01/26 16:49:44.000.663,=C:\Users\lenovo\Desktop\Delphi\2021_1_26_DLL\DLL进阶\MainForm.pas</Transaction>
+    <Transaction>2021/01/26 16:49:57.000.527,C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\lenovo\Desktop\Delphi\2021_1_26_DLL\DLL进阶\Main\MainProject.dproj</Transaction>
+    <Transaction>2021/01/26 16:50:24.000.863,=C:\Users\lenovo\Desktop\Delphi\2021_1_26_DLL\DLL进阶\Main\MainForm.pas</Transaction>
+  </Transactions>
+</BorlandProject>

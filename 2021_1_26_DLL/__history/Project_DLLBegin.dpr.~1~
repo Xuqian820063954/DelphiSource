@@ -1,0 +1,10 @@
+library Project_DLLBegin;
+
+uses
+  System.SysUtils,
+  System.Classes;
+
+{$R *.res}
+
+begin
+end.

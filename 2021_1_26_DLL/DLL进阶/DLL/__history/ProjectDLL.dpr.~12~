@@ -1,0 +1,31 @@
+library ProjectDLL;
+
+uses
+  Winapi.Windows,Vcl.Forms,System.SysUtils,
+  System.Classes;
+
+{$R *.res}
+function Add(a,b:Integer):Integer;overload;stdcall;
+begin
+  Result:=a+b;
+  Exit;
+end;
+function Add(a,b:Double):Double;overload;stdcall;
+begin
+  Result:=a+b;
+  Exit;
+end;
+exports
+  Add(a,b:Integer) name 'add1',
+  Add(a,b:Double) name 'add2';
+//ÍË³öº¯Êý
+procedure MyExit(Res:Integer);
+begin
+  case Res of
+
+  end;
+end;
+begin
+  DllProc:=@MyExit();
+  MyExit();
+end.

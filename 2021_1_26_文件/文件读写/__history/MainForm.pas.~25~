@@ -1,0 +1,120 @@
+unit MainForm;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Btn1: TButton;
+    Btn2: TButton;
+    Btn3: TButton;
+    Btn4: TButton;
+    Memo1: TMemo;
+    procedure Btn1Click(Sender: TObject);
+    procedure Btn2Click(Sender: TObject);
+    procedure Btn3Click(Sender: TObject);
+    procedure Btn4Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+  TPerson=record
+    Name:string[20];
+    Age:Integer;
+  end;
+var
+  Form1: TForm1;
+const
+  SOURCE_FILE='C:\Users\lenovo\Desktop\Delphi\2021_1_26_文件\文件读写\Demo1.txt';
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.Btn1Click(Sender: TObject);
+var
+  //读取文本文档的类型
+  DataSourceFile:TextFile;
+begin
+  try
+    //关联
+    AssignFile(DataSourceFile,SOURCE_FILE);
+    //打开文件
+    Rewrite(DataSourceFile);//只写
+    //Append(DataSourceFile);
+    Writeln(DataSourceFile,'HelloWorld');
+  finally
+    //关闭文件
+    CloseFile(DataSourceFile);
+  end;
+end;
+
+procedure TForm1.Btn2Click(Sender: TObject);
+var
+  //读取文本文档的类型
+  DataSourceFile:TextFile;
+  Content:string;
+begin
+  try
+    //关联
+    AssignFile(DataSourceFile,SOURCE_FILE);
+    //打开文件
+    Reset(DataSourceFile);//只读
+    //Append(DataSourceFile);
+    Readln(DataSourceFile,Content);
+    Form1.Caption:=Form1.Caption+Content;
+  finally
+    //关闭文件
+    CloseFile(DataSourceFile);
+  end;
+end;
+
+procedure TForm1.Btn3Click(Sender: TObject);
+var
+  Person:TPerson;
+  PersonFile:file of TPerson;
+begin
+  try
+    //关联
+    AssignFile(PersonFile,SOURCE_FILE);
+    //打开文件
+    Rewrite(PersonFile);//只读
+    Person.Name:='aaa';
+    Person.Age:=18;
+    Write(PersonFile,Person);
+    ShowMessage('记录数：'+IntToStr(FileSize(PersonFile))+'，当前文件位置：'+IntToStr(FilePos(PersonFile)));
+    Person.Name:='bbb';
+    Person.Age:=19;
+    Write(PersonFile,Person);
+    ShowMessage('记录数：'+IntToStr(FileSize(PersonFile))+'，当前文件位置：'+IntToStr(FilePos(PersonFile)));
+  finally
+    //关闭文件
+    CloseFile(PersonFile);
+  end;
+end;
+
+procedure TForm1.Btn4Click(Sender: TObject);
+var
+  Person:TPerson;
+  PersonFile:file of TPerson;
+  Content:string;
+begin
+  try
+    //关联
+    AssignFile(PersonFile,SOURCE_FILE);
+    //打开文件
+    Reset(PersonFile);//只读
+    read(PersonFile,Person);
+    Memo1.Clear;
+    Form1.Memo1.Lines.Add(Person.Name);
+    Form1.Memo1.Lines.Add(Person.Age.ToString);
+  finally
+    //关闭文件
+    CloseFile(PersonFile);
+  end;
+end;
+
+end.

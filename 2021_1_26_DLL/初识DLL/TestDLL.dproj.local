@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/01/22 19:52:57.000.868,=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/26 16:16:14.000.952,C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\lenovo\Desktop\Delphi\2021_1_26_DLL\Project_DLLBegin.dproj</Transaction>
+    <Transaction>2021/01/26 16:22:46.547,C:\Users\lenovo\Desktop\Delphi\2021_1_26_DLL\初识DLL\test.dproj=C:\Users\lenovo\Desktop\Delphi\2021_1_26_DLL\初识DLL\Project_DLLBegin.dproj</Transaction>
+    <Transaction>2021/01/26 16:23:59.225,C:\Users\lenovo\Desktop\Delphi\2021_1_26_DLL\初识DLL\TestDLL.dproj=C:\Users\lenovo\Desktop\Delphi\2021_1_26_DLL\初识DLL\test.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

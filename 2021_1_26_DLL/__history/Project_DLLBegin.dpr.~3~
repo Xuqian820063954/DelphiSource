@@ -1,0 +1,14 @@
+library Project_DLLBegin;
+
+uses
+  System.SysUtils,
+  System.Classes;
+
+{$R *.res}
+//stdcall参数的传递顺序
+function Add(Num1,Num2:Integer):Integer;stdcall;
+begin
+
+end;
+begin
+end.
