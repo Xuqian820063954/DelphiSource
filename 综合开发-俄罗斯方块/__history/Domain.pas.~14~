@@ -1,0 +1,37 @@
+unit Domain;
+{*------------------------------------------------------------------------------
+  @author  徐乾
+  @version 2021/01/28 1.0 Initial revision.
+  @comment 存储图形数据的结构
+  //每种图形由4个方块组成，数组（长度4）或TList<T>实现
+  //每种图形由4对坐标组成
+        TPoint表示坐标
+-------------------------------------------------------------------------------}
+interface
+uses
+  System.Generics.Collections,System.Types;
+
+type  TGameData=class
+      public
+        class function GetActByIndex(ActIndex:Integer):TList<TPoint>;
+      end;
+implementation
+var
+  ActList:TList<TList<TPoint>>;//图形列表，ActList.Item[i]为第i个图形的数据
+  Points:TList<TPoint>;//方块列表，Points.Item[i]为图形第i个方块的坐标
+{ TGameData }
+//根据编号返回对应图形数据，取值范围0~6
+class function TGameData.GetActByIndex(ActIndex: Integer): TList<TPoint>;
+begin
+  Result:=ActList.Items[ActIndex];
+end;
+initialization
+  //创建图形数组
+  ActList:=TList<TList<TPoint>>.Create;
+  //创建方块：****
+  Points:=TList<TPoint>.Create;
+  Points.Add(TPoint.Create(0,0));
+  Points.Add(TPoint.Create(1,0));
+  Points.Add(TPoint.Create(2,0));
+  Points.Add(TPoint.Create(3,0));
+end.

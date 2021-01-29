@@ -1,0 +1,22 @@
+program Project_Record;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+//记录，相当于结构体
+type  TStudent=record
+        ID:Integer;//ID
+        Name:string;//名字
+      end;
+      Point=array[0..1] of Integer;
+      TActList=array[0..6] of array[0..3] of Point;
+var Student:TStudent;
+    ActList:TActList;
+begin
+  //结构体赋值
+  Student.ID:=3;
+  Student.Name:='aaa';
+end.

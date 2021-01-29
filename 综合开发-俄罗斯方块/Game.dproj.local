@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/01/22 19:52:57.000.868,=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/27 16:45:15.000.782,=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/27 16:46:15.000.642,=C:\Users\lenovo\Desktop\Delphi\综合开发-俄罗斯方块\Unit_MainForm.pas</Transaction>
+    <Transaction>2021/01/27 16:46:36.000.287,=C:\Users\lenovo\Desktop\Delphi\综合开发-俄罗斯方块\Unit_Service.pas</Transaction>
+    <Transaction>2021/01/27 16:46:48.000.637,C:\Users\lenovo\Desktop\Delphi\综合开发-俄罗斯方块\Game.dproj=C:\Users\lenovo\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/01/27 16:47:00.000.601,=C:\Users\lenovo\Desktop\Delphi\综合开发-俄罗斯方块\Unit1.pas</Transaction>
+    <Transaction>2021/01/27 16:47:21.000.624,C:\Users\lenovo\Desktop\Delphi\综合开发-俄罗斯方块\Unit_Const.pas=C:\Users\lenovo\Desktop\Delphi\综合开发-俄罗斯方块\Unit1.pas</Transaction>
+    <Transaction>2021/01/28 09:25:56.000.966,=C:\Users\lenovo\Desktop\Delphi\综合开发-俄罗斯方块\Unit1.pas</Transaction>
+    <Transaction>2021/01/28 09:26:07.000.916,C:\Users\lenovo\Desktop\Delphi\综合开发-俄罗斯方块\Unit1.pas=C:\Users\lenovo\Desktop\Delphi\综合开发-俄罗斯方块\Domain.pas</Transaction>
+    <Transaction>2021/01/28 09:55:17.000.931,C:\Users\lenovo\Desktop\Delphi\综合开发-俄罗斯方块\Domain.pas=C:\Users\lenovo\Desktop\Delphi\综合开发-俄罗斯方块\Unit_Domain.pas</Transaction>
+    <Transaction>2021/01/28 14:11:45.000.979,=C:\Users\lenovo\Desktop\Delphi\综合开发-俄罗斯方块\Unit1.pas</Transaction>
+    <Transaction>2021/01/28 14:11:59.000.329,C:\Users\lenovo\Desktop\Delphi\综合开发-俄罗斯方块\Unit_Utils.pas=C:\Users\lenovo\Desktop\Delphi\综合开发-俄罗斯方块\Unit1.pas</Transaction>
+    <Transaction>2021/01/28 14:59:58.000.736,C:\Users\lenovo\Desktop\Delphi\综合开发-俄罗斯方块\Unit_Data.pas=C:\Users\lenovo\Desktop\Delphi\综合开发-俄罗斯方块\Unit_Domain.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="-1" SortType="0"/>
+</BorlandProject>

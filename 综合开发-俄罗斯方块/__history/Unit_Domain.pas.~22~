@@ -1,0 +1,53 @@
+unit Unit_Domain;
+{*------------------------------------------------------------------------------
+  @author  徐乾
+  @version 2021/01/28 1.0 Initial revision.
+  @comment 存储图形数据的结构
+  //每种图形由4个方块组成，数组（长度4）或TList<T>实现
+  //每种图形由4对坐标组成
+        TPoint表示坐标
+-------------------------------------------------------------------------------}
+interface
+uses
+  System.Generics.Collections;
+type  TAct=array of array of Integer;//方块类型
+      TGameData=class
+      public
+        class function GetActByIndex(ActIndex:Integer):TAct;
+      end;
+
+implementation
+var
+  ActList:TList<TAct>;//图形列表，ActList.Item[i]为第i个图形的数据
+  Act:TAct;//方块数据，Act[i][0]为图形第i个方块的x坐标，Act[i][1]为图形第i个方块的y坐标
+{ TGameData }
+//根据编号返回对应图形数据，取值范围0~6
+class function TGameData.GetActByIndex(ActIndex: Integer): TAct;
+begin
+  Result:=ActList.Items[ActIndex];
+end;
+initialization
+  //创建图形数组
+  ActList:=TList<TAct>.Create;
+  //创建方块：一字型
+  Act:=[[0,0],[1,0],[2,0],[3,0]];
+  ActList.Add(Act);
+  //创建方块：T字型
+  Act:=[[0,0],[1,0],[2,0],[1,1]];
+  ActList.Add(Act);
+  //创建方块：L字型
+  Act:=[[0,0],[1,0],[2,0],[0,1]];
+  ActList.Add(Act);
+    //创建方块：一字型
+  Act:=[[0,0],[1,0],[2,0],[3,0]];
+  ActList.Add(Act);
+    //创建方块：一字型
+  Act:=[[0,0],[1,0],[2,0],[3,0]];
+  ActList.Add(Act);
+    //创建方块：一字型
+  Act:=[[0,0],[1,0],[2,0],[3,0]];
+  ActList.Add(Act);
+    //创建方块：一字型
+  Act:=[[0,0],[1,0],[2,0],[3,0]];
+  ActList.Add(Act);
+end.

@@ -1,0 +1,219 @@
+unit Unit_Service;
+{*------------------------------------------------------------------------------
+  @author  徐乾
+  @version 2021/01/27 1.0 Initial revision.
+  @comment 游戏业务控制
+-------------------------------------------------------------------------------}
+interface
+uses
+  Unit_Data,
+  System.SysUtils,System.Types,System.IOUtils,Winapi.Windows,Winapi.GDIPOBJ,Winapi.GDIPAPI;
+type  TGameService=class
+      private
+        FGameHandle:HDC;//句柄
+        FImageIndex:Integer;//图片编号
+        FCurrentAct:TAct;//当前方块
+        FGameMap:TGameMap;//游戏地图数据
+        function IsRemovable(Y:Integer):Boolean;//判断是否有消行
+        procedure RemoveLine(RowNum:Integer);//消行
+      public
+        property GameHandle:HDC read FGameHandle write FGameHandle;
+        property ImageIndex:Integer read FImageIndex write FImageIndex;
+        property CurrentAct:TAct read FCurrentAct write FCurrentAct;
+        property GameMap:TGameMap read FGameMap;
+        //构造方法
+        constructor Create();overload;
+        constructor Create(FGameHandle:HDC);overload;
+        //绘制图片
+        procedure DrawImage(FileName:string;Width,Height:Integer);
+        //绘制背景
+        procedure DrawBackground(Width,Height:Integer);
+        //绘制窗口
+        procedure DrawWindow(x,y,Width,Height:Integer);
+        //绘制方块
+        procedure DrawAct(x,y,ActIndex:Integer);
+        //移动方块
+        function Move(x,y:Integer):Boolean;
+        //图形旋转
+        procedure Rotate();
+        //绘制地图
+        procedure DrawGameMap();
+        //设置地图
+        procedure SetGameMap(X,Y:Integer);
+      end;
+implementation
+uses Unit_MainForm,Unit_Const;
+{ TGameService }
+//无参构造
+constructor TGameService.Create;
+begin
+  inherited;
+end;
+//有参构造
+constructor TGameService.Create(FGameHandle: HDC);
+begin
+  Self.FGameHandle:=GameHandle;
+end;
+//绘制图片（图片名称，宽，高）
+procedure TGameService.DrawImage(FileName:string;Width,Height:Integer);
+var Graphics:TGPGraphics;//画笔
+    Image:TGPImage;
+begin
+  //载入图片
+  Image:=TGPImage.Create(FileName);
+  //将图片绘制到制定控件上
+  Graphics:=TGPGraphics.Create(GameHandle);
+  //绘制图片
+  Graphics.DrawImage(Image,MakeRect(0,0,Width,Height));
+  //释放资源
+  Graphics.Free;
+  Image.Free;
+end;
+//绘制背景（宽，高）
+procedure TGameService.DrawBackground(Width,Height:Integer);
+var ImageList:TStringDynArray;
+begin
+  //获取图片列表
+  ImageList:=TDirectory.GetFiles(Unit_Const.BACK_GROUND_IMAGE);
+  if Self.FImageIndex>=Length(ImageList) then
+    Self.FImageIndex:=0;
+  //选取图片展示在窗口
+  DrawImage(ImageList[Self.ImageIndex],Width,Height);
+end;
+//绘制游戏窗口（窗口x坐标，窗口y坐标，窗口宽度，窗口高度
+procedure TGameService.DrawWindow(x, y, Width, Height: Integer);
+var Graphics:TGPGraphics;//画笔
+    Image:TGPImage;
+    Thickness:Integer;
+begin
+  Thickness:=Unit_Const.GAME_WINDOW_BORDER_WIDTH;
+  //载入图片
+  Image:=TGPImage.Create(Unit_Const.GAME_WINDOW);
+  //将图片绘制到制定控件上
+  Graphics:=TGPGraphics.Create(GameHandle);
+  //绘制图片 DrawImage(Image,MakeRect(显示图片的左上角坐标，显示图片大小),截取图片大小，截取图片大小，单位)
+  //左上角
+  Graphics.DrawImage(Image,MakeRect(x,y,Thickness,Thickness),0,0,Unit_Const.GAME_WINDOW_BORDER_WIDTH,Unit_Const.GAME_WINDOW_BORDER_WIDTH,UnitPixel);
+  //左侧竖线
+  Graphics.DrawImage(Image,MakeRect(x,y+Thickness,Thickness,Height-2*Thickness),0,Unit_Const.GAME_WINDOW_BORDER_WIDTH,Unit_Const.GAME_WINDOW_BORDER_WIDTH,Image.GetHeight-2*Unit_Const.GAME_WINDOW_BORDER_WIDTH,UnitPixel);
+  //左下角
+  Graphics.DrawImage(Image,MakeRect(x,Height-Thickness,Thickness,Thickness),0,Image.GetHeight-Unit_Const.GAME_WINDOW_BORDER_WIDTH,Unit_Const.GAME_WINDOW_BORDER_WIDTH,Unit_Const.GAME_WINDOW_BORDER_WIDTH,UnitPixel);
+  //底部横线
+  Graphics.DrawImage(Image,MakeRect(x+Thickness,Height-Thickness,Width-2*Thickness,Thickness),Unit_Const.GAME_WINDOW_BORDER_WIDTH,Image.GetHeight-Unit_Const.GAME_WINDOW_BORDER_WIDTH,Image.GetWidth-2*Unit_Const.GAME_WINDOW_BORDER_WIDTH,Unit_Const.GAME_WINDOW_BORDER_WIDTH,UnitPixel);
+  //右下角
+  Graphics.DrawImage(Image,MakeRect(x+Width-Thickness,Height-Thickness,Thickness,Thickness),Image.GetWidth-Unit_Const.GAME_WINDOW_BORDER_WIDTH,Image.GetHeight-Unit_Const.GAME_WINDOW_BORDER_WIDTH,Unit_Const.GAME_WINDOW_BORDER_WIDTH,Unit_Const.GAME_WINDOW_BORDER_WIDTH,UnitPixel);
+  //右侧竖线
+  Graphics.DrawImage(Image,MakeRect(x+Width-Thickness,y+Thickness,Thickness,Height-2*Thickness),Image.GetWidth-Unit_Const.GAME_WINDOW_BORDER_WIDTH,Unit_Const.GAME_WINDOW_BORDER_WIDTH,Unit_Const.GAME_WINDOW_BORDER_WIDTH,Image.GetHeight-2*Unit_Const.GAME_WINDOW_BORDER_WIDTH,UnitPixel);
+  //右上角
+  Graphics.DrawImage(Image,MakeRect(x+Width-Thickness,y,Thickness,Thickness),Image.GetWidth-Unit_Const.GAME_WINDOW_BORDER_WIDTH,0,Unit_Const.GAME_WINDOW_BORDER_WIDTH,Unit_Const.GAME_WINDOW_BORDER_WIDTH,UnitPixel);
+  //顶部横线
+  Graphics.DrawImage(Image,MakeRect(x+Thickness,y,Width-2*Thickness,Thickness),Thickness,0,Image.GetWidth-2*Thickness,Thickness,UnitPixel);
+  //中间
+  Graphics.DrawImage(Image,MakeRect(x+Thickness,y+Thickness,Width-2*Thickness,Height-2*Thickness),Thickness,Thickness,Image.GetWidth-2*Thickness,Image.GetHeight-2*Thickness,UnitPixel);
+  //释放资源
+  Graphics.Free;
+  Image.Free;
+end;
+//绘制方块（方块位置，种类编号<从0开始>）
+procedure TGameService.DrawAct(x,y,ActIndex: Integer);
+var Graphics:TGPGraphics;//画笔
+    Image:TGPImage;
+    Size:Integer;
+begin
+  Size:=Unit_Const.ACT_SIZE div 2;
+  //载入图片
+  Image:=TGPImage.Create(GAME_ACT_IMAGE);
+  //将图片绘制到制定控件上
+  Graphics:=TGPGraphics.Create(GameHandle);
+  //绘制图片
+  Graphics.DrawImage(Image,MakeRect(x,y,Size,Size),ActIndex*Unit_Const.ACT_SIZE,0,Unit_Const.ACT_SIZE,Unit_Const.ACT_SIZE,UnitPixel);
+  //释放资源
+  Graphics.Free;
+  Image.Free;
+end;
+//移动方块（图形坐标）：True可移动/False不可移动
+function TGameService.Move(x, y:Integer): Boolean;
+var I:Integer;
+    NewX,NewY:Integer;
+begin
+  //边界判断
+  for I := 0 to Length(Self.FCurrentAct)-1 do begin
+    NewX:=Self.FCurrentAct[I][0]+x;
+    NewY:=Self.FCurrentAct[I][1]+y;
+    if (NewX<0)or(NewX>=Unit_Const.GAME_MAP_WIDTH)or(NewY >=Unit_Const.GAME_MAP_HEIGHT)or Self.FGameMap[NewX][NewY] then begin
+      Result:=False;Exit;
+    end;
+  end;
+  //图形移动
+  for I := 0 to Length(Self.FCurrentAct)-1 do begin
+    Inc(Self.FCurrentAct[I][0],x);
+    Inc(Self.FCurrentAct[I][1],y);
+  end;
+  Result:=True;
+end;
+//图形旋转
+procedure TGameService.Rotate;
+var I:Integer;
+    NewX,NewY:Integer;
+begin
+  //边界判断
+  for I := 0 to Length(Self.FCurrentAct)-1 do begin
+    NewX:=Self.FCurrentAct[0][1]+Self.FCurrentAct[0][0]-Self.FCurrentAct[I][1];
+    NewY:=Self.FCurrentAct[0][1]-Self.FCurrentAct[0][0]+Self.FCurrentAct[I][0];
+    if (NewX<0)or(NewX>=Unit_Const.GAME_MAP_WIDTH)or(NewY >=Unit_Const.GAME_MAP_HEIGHT)or(NewY<0)or GameMap[NewX][NewY] then begin
+      Exit;
+    end;
+  end;
+  //图形顺时针旋转
+  for I := 1 to Length(Self.FCurrentAct)-1 do begin
+    NewX:=Self.FCurrentAct[0][1]+Self.FCurrentAct[0][0]-Self.FCurrentAct[I][1];
+    NewY:=Self.FCurrentAct[0][1]-Self.FCurrentAct[0][0]+Self.FCurrentAct[I][0];
+    Self.FCurrentAct[I][0]:=NewX;
+    Self.FCurrentAct[I][1]:=NewY;
+  end;
+end;
+//绘制游戏地图
+procedure TGameService.DrawGameMap;
+var X,Y:Integer;
+begin
+  for X := 0 to Unit_Const.GAME_MAP_WIDTH-1 do begin
+    if IsRemovable(X) then begin
+      MainForm.Log.Info('该行可以消除',X.ToString);
+      RemoveLine(X);
+    end;
+    for Y := 0 to Unit_Const.GAME_MAP_HEIGHT-1 do begin
+      if Self.FGameMap[X][Y] then
+        DrawAct(7+X*16,7+Y*16,0);
+    end;
+  end;
+end;
+//设置游戏地图
+procedure TGameService.SetGameMap(X, Y: Integer);
+begin
+  Self.FGameMap[X][Y]:=True;
+end;
+//判断是否有消行
+function TGameService.IsRemovable(Y: Integer): Boolean;
+var X:Integer;
+begin
+  //一行中有空
+  for X := 0 to Unit_Const.GAME_MAP_Width-1 do begin
+    if not Self.FGameMap[X][Y] then begin
+      Result:=False;Exit;
+    end;
+  end;
+  //某行全满
+  Result:=True;
+end;
+//消行
+procedure TGameService.RemoveLine(RowNum: Integer);
+var X,Y:Integer;
+begin
+  for X := 0 to Unit_Const.GAME_MAP_WIDTH-1 do begin
+    for Y:= RowNum downto 0 do begin
+      FGameMap[X][Y]:=FGameMap[X][Y-1];
+    end;
+    FGameMap[X][0]:=False;
+  end;
+end;
+end.

@@ -1,0 +1,26 @@
+program Project_Record;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+//记录，相当于结构体
+type  TStudent=record
+        ID:Integer;//ID
+        Name:string;//名字
+      end;
+      TPoint=array of Integer;
+      Act=Array of TPoint;
+      TActList=array of array of TPoint;
+var Student:TStudent;
+    Point:TPoint;
+    ActList:TActList;
+begin
+  //结构体赋值
+  Student.ID:=3;
+  Student.Name:='aaa';
+  Point:=[0,0];
+  ActList[0]:=[[0,0],[1,0],[2,0],[3,0]];
+end.
